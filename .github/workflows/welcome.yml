@@ -1,6 +1,10 @@
-name: Post Welcome Comment
-on:
- pull_request:
-  types: [opened]
-permissions:
-  pull-request: write
+name: Hello Github Actions
+on: [push]
+jobs:
+ bulid:
+  runs-on: ubuntu-latest
+   steps:
+    -name: Checkout code
+     uses: actions/checkout@v3
+     -name: Say Hello
+      run: echo "hello from Github Actions!"
